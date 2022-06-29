@@ -6,7 +6,8 @@ FROM mcr.microsoft.com/vscode/devcontainers/cpp:0-${VARIANT}
 #WORKDIR /tmp/src
 
 RUN apt-get update -y \
-  && apt-get install -y --no-install-recommends build-essential bison flex 
+  && apt-get install -y --no-install-recommends build-essential bison flex \
+  &&apt install libbison-dev
 
 # [Optional] Uncomment this section to install additional packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
